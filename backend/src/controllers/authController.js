@@ -19,7 +19,7 @@ const generateToken = (userID) => {
 //Checking if user exists in Database, if not write the details to the Database
 const register = async (req, res) => {
     try {
-        const { email, username, password } = req.bo44eedy;
+        const { email, username, password } = req.body;
         const existingUser = await pool.query(
             'SELECT id, username, email FROM users WHERE email = $1 OR username = $2',
             [email, username]
