@@ -24,6 +24,7 @@ app.use(limiter);
 
 
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/matches', require('./routes/match'));
 
 app.get("/health", (req, res) => {
     res.json({ status: "ok" });
